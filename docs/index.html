@@ -1,12 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 <head>
-  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
   <title>TRUSTLESS LIFE - Tokyo 2040 -</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha256-GqiEX9BuR1rv5zPU5Vs2qS/NSHl1BJyBcjQYJ6ycwD4=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./style.css">
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous"></script>
+  <script src="https://cdn.rawgit.com/hmongouachon/mgGlitch/master/src/mgGlitch.js"></script>
 </head>
 <body>
   <main>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe8ou26kg3K60n6Uh48RVcAifBAs4wBuQjoXLUypahAnEnkgQ/viewform?embedded=true" width="640" height="1233" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+    <div id="map"></div>
+    <div class="glitch"></div>
+    <section class="section">
+      <div class="section__inner">
+        <div class="exhibit__titleWrapper">
+          <div class="exhibit__title">
+            <h1>TRUSTLESS LIFE SERIES</h1>
+            <h2>Tokyo 2040</h2>
+            <h3>1/11, 1/15, 1/18</h3>
+          </div>
+        </div>
+        <div class="exhibit__descs">
+          <p data-aos="fade-up">価値保存の機能を果たす「貨幣」は、貝殻や貴金属と言った「モノ」から紙幣のような「紙などに印刷された約束」に発展し、現在流通している仮想通貨が生まれるまでになった。仮想通貨は、誰もが通貨を発行する権利を持ち、また特定の誰かによってシステムが止められない特徴を持つ。このデジタル上に固定される「約束」を実現可能にしたのが、2009年に発明されたブロックチェーン技術である。この技術により、インターネットにつながってさえいれば、いつでもどこでも取引でき、誰にも止めることのできない「約束」が可能になったのである。</p>
+          <p data-aos="fade-up">この技術によって、どのような社会が実現可能になるのだろうか？</p>
+          <p data-aos="fade-up">人類が築いてきた文明社会は、人間同士がただ群れを成すだけではなく、ルールや慣習を規定し、社会を形成することによって発展してきた。歴史上で生まれたさまざまなルールは、そのたびに世界を大きく変化させ、規定される「ルール」、人と人同士の「約束」は、石版や紙と言ったメディアに「文章」として書き込まれてきた。それらは今後、コンピュータやブロックチェーンといったメディアに「コード」として書き込まれていくのだろう。</p>
+          <p data-aos="fade-up">TRUSTLESS LIFEシリーズは、個々人が持つ他者からの形のない「信用」が「コード」として、合意された「約束」によって判断され、蓄積する「信用社会」での人生を描くボードゲーム作品シリーズであり、未来、ブロックチェーン技術が適用されることによって起こり得る可能性のある世界を想像可能にする。</p>
+          <p data-aos="fade-up">新作「TOKYO2040」は、2040年の東京を舞台としたボードゲーム作品である。</p>
+          <p data-aos="fade-up">2040年、AIはもうすぐ人類を越える。都市中の情報を学習するAIが、ありとあらゆる「人類にとっての」危険を未来予知し始め、些細な事故ことから大規模な災害まで、「いつどんな危機が訪れるのか」「どのように対処すべきか」を示すとしたら。</p>
+          <p data-aos="fade-up">現在、2040年にはもはや手のつけられない高齢化社会と孤立化、そして急速な人口減少が訪れると予想されている。人々は技術とどう向き合い、関係を作っていくのだろうか。ゲームという一つのシミュレーションを通じて起こり得る世界を想像してほしい。</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section__inner"></div>
+    </section>
+    <section class="section">
+      <div class="section__inner">
+        <div class="exhibit__form" data-aos="fade-up">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe8ou26kg3K60n6Uh48RVcAifBAs4wBuQjoXLUypahAnEnkgQ/viewform?embedded=true" width="100%" height="1357" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+        </div>
+      </div>
+    </section>
   </main>
+  <script>
+    AOS.init();
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 35.66480076330584, lng: 139.7453529567945},
+        zoom: 12,
+        disableDefaultUI: true,
+        scrollwheel: false,
+        styles: [{"elementType":"geometry","stylers":[{"color":"#f5f5f5"}]},{"elementType":"labels","stylers":[{"visibility":"off"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#f5f5f5"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#bdbdbd"}]},{"featureType":"administrative.neighborhood","stylers":[{"visibility":"off"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#ffffff"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#dadada"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"featureType":"road.local","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"transit.station","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#c9c9c9"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]}]
+      });
+    }
+    $( function() {
+      $( ".glitch" ).mgGlitch({
+        destroy : false, // set 'true' to stop the plugin
+        glitch: true, // set 'false' to stop glitching
+        scale: true, // set 'false' to stop scaling
+        blend : true, // set 'false' to stop glitch blending
+        blendModeType : 'hue', // select blend mode type
+        glitch1TimeMin : 600, // set min time for glitch 1 elem
+        glitch1TimeMax : 300, // set max time for glitch 1 elem
+        glitch2TimeMin : 10, // set min time for glitch 2 elem
+        glitch2TimeMax : 115, // set max time for glitch 2 elem
+        zIndexStart : 8, // because of absolute position, set z-index base value
+      });
+    });
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0Yni_eUy3qh1rscX85JA6-wIbBx9FaKQ&callback=initMap"
+  async defer></script>
 </body>
 </html>
