@@ -108,6 +108,27 @@ html, body {
   padding: 3rem 0;
 }
 
+.exhibit__infomation {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.exhibit__infomation li {
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0 0 0 150px;
+  list-style-type: none;
+}
+
+.exhibit__infomation li span {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 @-webkit-keyframes scrollFacilitateAnim {
   from {
     -webkit-transform: translate(-50%, -10px) rotate(45deg);
