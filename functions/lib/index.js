@@ -1,25 +1,23 @@
-import * as functions from 'firebase-functions';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const functions = require("firebase-functions");
 const admin = require('firebase-admin');
-
-admin.initializeApp(functions.config().firebase)
-
+admin.initializeApp(functions.config().firebase);
 const db = admin.firestore();
-
-export const scheduledFunction = functions.pubsub.schedule('every 1 minutes').onRun((context) => {
-  const blockchain = db.collection("blockchain");
-  blockchain.doc("block").get()
-    .then((doc:any) => {
-      blockchain.doc("block").set({
-        height: doc.data().height + 1,
-        timestamp: Date.now()
-      })
+exports.scheduledFunction = functions.pubsub.schedule('every 1 minutes').onRun((context) => {
+    const blockchain = db.collection("blockchain");
+    blockchain.doc("block").get()
+        .then((doc) => {
+        blockchain.doc("block").set({
+            height: doc.data().height + 1,
+            timestamp: Date.now()
+        });
     })
-    .catch((err:any) => {
-      console.log(err);
+        .catch((err) => {
+        console.log(err);
     });
-  console.log('This will be run every 1 minutes!',context);
+    console.log('This will be run every 1 minutes!', context);
 });
-
 // export const tokyo2040_getAssets = functions.https.onCall((data, context) => {
 //   /**
 //    * argument
@@ -113,3 +111,4 @@ export const scheduledFunction = functions.pubsub.schedule('every 1 minutes').on
 //   };
 //   t10s.add(tx);
 // });
+//# sourceMappingURL=index.js.map
