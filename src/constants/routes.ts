@@ -1,2 +1,3 @@
-export const SIGN_IN = "/signin";
-export const LANDING = "/";
+export const MISSION = "/mission";
+export const SIGNIN = "/signin";
+export const HOME = "/";

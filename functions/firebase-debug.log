@@ -1,0 +1,89 @@
+[debug] [2020-01-07T16:23:58.725Z] ----------------------------------------------------------------------
+[debug] [2020-01-07T16:23:58.727Z] Command:       /Users/hblkkato/.ndenv/versions/v12.12.0/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2020-01-07T16:23:58.727Z] CLI Version:   7.11.0
+[debug] [2020-01-07T16:23:58.727Z] Platform:      darwin
+[debug] [2020-01-07T16:23:58.727Z] Node Version:  v12.12.0
+[debug] [2020-01-07T16:23:58.730Z] Time:          Wed Jan 08 2020 01:23:58 GMT+0900 (Japan Standard Time)
+[debug] [2020-01-07T16:23:58.732Z] ----------------------------------------------------------------------
+[debug] [2020-01-07T16:23:58.732Z] 
+[debug] [2020-01-07T16:23:58.742Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-07T16:23:58.742Z] > authorizing via signed-in user
+[debug] [2020-01-07T16:23:58.742Z] [iam] checking project tokyo-2040 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-01-07T16:23:58.748Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tokyo-2040:testIamPermissions  
+
+[debug] [2020-01-07T16:23:59.017Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'tokyo-2040'...
+[info] 
+[info] i  deploying functions
+[info] Running command: npm --prefix "$RESOURCE_DIR" run deploy
+[debug] [2020-01-07T16:24:02.445Z] ----------------------------------------------------------------------
+[debug] [2020-01-07T16:24:02.450Z] Command:       /Users/hblkkato/.ndenv/versions/v12.12.0/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2020-01-07T16:24:02.450Z] CLI Version:   7.11.0
+[debug] [2020-01-07T16:24:02.450Z] Platform:      darwin
+[debug] [2020-01-07T16:24:02.450Z] Node Version:  v12.12.0
+[debug] [2020-01-07T16:24:02.451Z] Time:          Wed Jan 08 2020 01:24:02 GMT+0900 (Japan Standard Time)
+[debug] [2020-01-07T16:24:02.451Z] ----------------------------------------------------------------------
+[debug] [2020-01-07T16:24:02.451Z] 
+[debug] [2020-01-07T16:24:02.459Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-07T16:24:02.460Z] > authorizing via signed-in user
+[debug] [2020-01-07T16:24:02.460Z] [iam] checking project tokyo-2040 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-01-07T16:24:02.461Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tokyo-2040:testIamPermissions  
+
+[debug] [2020-01-07T16:24:03.324Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'tokyo-2040'...
+[info] 
+[info] i  deploying functions
+[info] Running command: npm --prefix "$RESOURCE_DIR" run deploy
+[debug] [2020-01-07T16:24:06.732Z] ----------------------------------------------------------------------
+[debug] [2020-01-07T16:24:06.734Z] Command:       /Users/hblkkato/.ndenv/versions/v12.12.0/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2020-01-07T16:24:06.734Z] CLI Version:   7.11.0
+[debug] [2020-01-07T16:24:06.734Z] Platform:      darwin
+[debug] [2020-01-07T16:24:06.734Z] Node Version:  v12.12.0
+[debug] [2020-01-07T16:24:06.735Z] Time:          Wed Jan 08 2020 01:24:06 GMT+0900 (Japan Standard Time)
+[debug] [2020-01-07T16:24:06.735Z] ----------------------------------------------------------------------
+[debug] [2020-01-07T16:24:06.736Z] 
+[debug] [2020-01-07T16:24:06.745Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-07T16:24:06.746Z] > authorizing via signed-in user
+[debug] [2020-01-07T16:24:06.746Z] [iam] checking project tokyo-2040 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-01-07T16:24:06.749Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tokyo-2040:testIamPermissions  
+
+[debug] [2020-01-07T16:24:07.952Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'tokyo-2040'...
+[info] 
+[info] i  deploying functions
+[info] Running command: npm --prefix "$RESOURCE_DIR" run deploy
+[debug] [2020-01-07T16:24:11.775Z] ----------------------------------------------------------------------
+[debug] [2020-01-07T16:24:11.777Z] Command:       /Users/hblkkato/.ndenv/versions/v12.12.0/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2020-01-07T16:24:11.777Z] CLI Version:   7.11.0
+[debug] [2020-01-07T16:24:11.777Z] Platform:      darwin
+[debug] [2020-01-07T16:24:11.777Z] Node Version:  v12.12.0
+[debug] [2020-01-07T16:24:11.778Z] Time:          Wed Jan 08 2020 01:24:11 GMT+0900 (Japan Standard Time)
+[debug] [2020-01-07T16:24:11.778Z] ----------------------------------------------------------------------
+[debug] [2020-01-07T16:24:11.779Z] 
+[debug] [2020-01-07T16:24:11.790Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-07T16:24:11.791Z] > authorizing via signed-in user
+[debug] [2020-01-07T16:24:11.791Z] [iam] checking project tokyo-2040 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-01-07T16:24:11.793Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tokyo-2040:testIamPermissions  
+
+[debug] [2020-01-07T16:24:12.563Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'tokyo-2040'...
+[info] 
+[info] i  deploying functions
+[info] Running command: npm --prefix "$RESOURCE_DIR" run deploy
+[debug] [2020-01-07T16:24:16.043Z] ----------------------------------------------------------------------
+[debug] [2020-01-07T16:24:16.046Z] Command:       /Users/hblkkato/.ndenv/versions/v12.12.0/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2020-01-07T16:24:16.046Z] CLI Version:   7.11.0
+[debug] [2020-01-07T16:24:16.046Z] Platform:      darwin
+[debug] [2020-01-07T16:24:16.047Z] Node Version:  v12.12.0
+[debug] [2020-01-07T16:24:16.048Z] Time:          Wed Jan 08 2020 01:24:16 GMT+0900 (Japan Standard Time)
+[debug] [2020-01-07T16:24:16.048Z] ----------------------------------------------------------------------
+[debug] [2020-01-07T16:24:16.048Z] 
+[debug] [2020-01-07T16:24:16.059Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-07T16:24:16.060Z] > authorizing via signed-in user
+[debug] [2020-01-07T16:24:16.060Z] [iam] checking project tokyo-2040 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-01-07T16:24:16.062Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tokyo-2040:testIamPermissions  
+
