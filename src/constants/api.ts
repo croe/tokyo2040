@@ -5,6 +5,8 @@ const db = firebase.firestore();
 
 export const users = db.collection("users");
 export const blocks = db.collection("blockchain").doc("block");
+export const tokens = db.collection("tokens");
+export const missions = db.collection("missions");
 
 // export const GET_TEST_ASSETS = 'testgame_getResource';
 // export const GET_TIMETX_ASSETS = 'timetx_getResource'

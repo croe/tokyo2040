@@ -8,6 +8,7 @@ import {Action, Dispatch} from "redux";
 import firebase from '../../constants/firebase';
 import {authActions} from "../../modules/Auth";
 import {setUserInfo} from "../organisms/AuthContainer";
+import CountdownTimer from '../../components/molecules/CountdownTimer';
 const ml5 = require('ml5');
 
 function mapStateToProps(state: ReduxState) {
@@ -32,8 +33,6 @@ const Home = (props: any) => {
   useEffect(() => {
     const blockchainObserver:any = blocks.onSnapshot((doc) => {
       const data:any = doc.data();
-      console.log(data);
-      console.log(props);
       setBlock(data);
     });
     return blockchainObserver;
@@ -69,6 +68,7 @@ const Home = (props: any) => {
       <img src={tiger} width="400" id="image" alt=""/>
       <Link to="/signin">signin</Link><br/>
       <Link to="/mission">mission</Link>
+      <CountdownTimer {...block} />
     </>
   )
 };
