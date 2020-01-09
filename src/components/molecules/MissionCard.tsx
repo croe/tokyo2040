@@ -52,6 +52,6 @@ const getLevelColor = (props: any) => {
     case 2: return color.text.level2;
     case 3: return color.text.level3;
   }
-}
+};
 
 export default MissionCard

@@ -1,10 +1,10 @@
-import React,{useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import MissionCard from '../../components/molecules/MissionCard';
 import {missions} from "../../constants/api";
 const QrReader = require('react-qr-reader');
 
-const Mission: any = () => {
+const Mission: any = (props: any) => {
 
   const [mission, setMissions]:any = useState([]);
 
@@ -15,6 +15,12 @@ const Mission: any = () => {
     });
     return missionsObserver;
   },[]);
+
+  const handleClickMissionCard = (mission: any) => {
+    console.log(mission);
+    // 信用度（実績）によって受けられるミッションが変化。これは明示的リセットでも良いし、時間経過リセットでも良い
+    // 受けられる・受けられない（活性・非活性）
+  }
 
   const handleScan = (data:any) => {
     if (data) {
@@ -33,7 +39,7 @@ const Mission: any = () => {
       {
         mission.map((mis: any, i: number) => {
           return (
-            <MissionCard key={`mis_${i}`} {...mis} />
+            <MissionCard key={`mis_${i}`} {...mis} onClick={() => handleClickMissionCard(mis)} />
           )
         })
       }

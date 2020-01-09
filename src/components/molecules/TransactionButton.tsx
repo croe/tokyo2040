@@ -23,6 +23,7 @@ const Button = styled.button`
   justify-content: center;
   background-color: ${color.background.secondary};
   box-shadow: 0 0 3px ${color.shadow.primary};
+  overflow: hidden;
 `;
 
 export default TransactionButton

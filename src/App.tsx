@@ -11,6 +11,7 @@ import {ReduxState} from "./constants/store";
 import {connect} from "react-redux";
 import {HOME, SIGNIN, MISSION} from "./constants/routes";
 import styled, {createGlobalStyle, ThemeProvider} from "styled-components";
+import {Reset} from "styled-reset";
 import bgImg from './bg.png';
 import TransactionButton from './components/molecules/TransactionButton';
 
@@ -44,17 +45,18 @@ function mapStateToProps(state: ReduxState) {
   return Object.assign({}, {userInfo: state.userInfo});
 }
 
-const App = () => {
+const App = (props: any) => {
 
   return (
     <ThemeProvider theme={{ fontFamily: "font-family:'游ゴシック Medium',YuGothic,YuGothicM,'Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,sans-serif" }}>
+      <Reset />
       <GlobalStyle />
       <BrowserRouter>
         <AppContainer>
           <Switch>
             <Route exact path={HOME}><Home /></Route>
             <Route path={SIGNIN}><Signin /></Route>
-            <Route path={MISSION}><Mission /></Route>
+            <Route path={MISSION}><Mission {...props} /></Route>
           </Switch>
           <TransactionButton />
         </AppContainer>
