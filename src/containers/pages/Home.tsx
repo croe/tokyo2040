@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import {Link} from "react-router-dom";
 import {ReduxState} from "../../constants/store";
 import {connect} from "react-redux";
@@ -38,10 +38,11 @@ const Home = (props: any) => {
   const [mission, setMissions]:any = useState([]);
 
   // FIXME: ほんとはReduxにしたい
-  const detectLabel = (detected:any) => {
+  const detectLabel = useCallback((detected:any) => {
     // Mission名が渡ってくるので、現状のmissionと紐付ける。
+    console.log(fmission);
     setMissions(detected);
-  };
+  }, [fmission]);
 
   useEffect(() => {
     const blockchainObserver:any = blocks.onSnapshot((doc: any) => {

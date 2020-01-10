@@ -18,22 +18,24 @@ const KNNDetector = (props:any) => {
   const [knnData, setKnnData]:any = useState("");
   const [selectedDomain, setSelectedDomain]:any = useState("");
   const [isSelectModal, setIsSelectModal]:any = useState(false);
+  const [isKNNModal, setIsKNNModal]:any = useState(true);
 
   const handleClickOpenSelectedModal = useCallback(() => {setIsSelectModal(true);}, []);
   const handleClickCloseSelectedModal = useCallback(() => {setIsSelectModal(false);}, []);
+  const handleClickOpenKNNModal = useCallback(() => {setIsKNNModal(true)},[]);
+  const handleClickCloseKNNModal = useCallback(() => {setIsKNNModal(false)},[]);
 
   const setup = (p: any) => {
     initializeFE(ml5.featureExtractor('MobileNet', modelReady));
-    initVideo(p.createCapture(p.VIDEO).size(320, 320));
-    // video = p.createCapture({
+    initVideo(p.createCapture(p.VIDEO));
+    // initVideo(p.createCapture({
     //   audio: false,
     //   video: {
     //     facingMode: {
     //       exact: "environment"
     //     }
     //   }
-    // });
-    // video.hide();
+    // }).size(320, 320));
   };
 
   const modelReady = () => {
@@ -159,13 +161,35 @@ const KNNDetector = (props:any) => {
   }, [])
 
   const customStyles = {
+    overlay: {
+      backgroundColor : "transparent"
+    },
     content : {
       top                   : '50%',
       left                  : '50%',
       right                 : 'auto',
       bottom                : 'auto',
       marginRight           : '-50%',
-      transform             : 'translate(-50%, -50%)'
+      transform             : 'translate(-50%, -50%)',
+      zIndex                : '1000'
+    }
+  };
+
+  const toggleKNNModal = () => {
+    handleClickCloseSelectedModal();
+    if (isKNNModal) {
+      handleClickCloseKNNModal();
+    } else {
+      handleClickOpenKNNModal();
+    }
+  };
+
+  const toggleSelectModal = () => {
+    handleClickCloseKNNModal();
+    if (isSelectModal) {
+      handleClickCloseSelectedModal();
+    } else {
+      handleClickOpenSelectedModal();
     }
   };
 
@@ -185,15 +209,18 @@ const KNNDetector = (props:any) => {
 
   return (
     <>
-      <h2>KNN Detector</h2>
-      <button onClick={addExample}>Training</button>
-      <button onClick={classify}>Start</button>
-      <button onClick={handleClickClearAllLabel}>Clear</button>
-      <button onClick={save}>Save</button>
-      <button onClick={load}>Load</button>
-      <p>{result}</p>
-      <Sketch setup={setup} />
-      <TrainingOpenButton onClick={handleClickOpenSelectedModal} />
+      <Modal isOpen={isKNNModal}
+             style={customStyles}
+      >
+        <h2>KNN Detector</h2>
+        <button onClick={addExample}>Training</button>
+        <button onClick={classify}>Start</button>
+        <button onClick={handleClickClearAllLabel}>Clear</button>
+        <button onClick={save}>Save</button>
+        <button onClick={load}>Load</button>
+        <p>{result}</p>
+        <Sketch setup={setup} />
+      </Modal>
       <Modal isOpen={isSelectModal}
              style={customStyles}
       >
@@ -202,6 +229,8 @@ const KNNDetector = (props:any) => {
           <QrReader delay={300} onScan={handleScan} onError={handleError} />
         </ModalContainer>
       </Modal>
+      <DomainSelectOpenButton onClick={toggleKNNModal}/>
+      <TrainingOpenButton onClick={toggleSelectModal} />
     </>
   );
 
@@ -221,12 +250,29 @@ const TrainingCloseButton = styled.button`
   right: -10px;
   background-color: ${color.background.secondary};
   border-radius: 50%;
+  z-index: 100;
   &:after {
     content: "×";
     color: ${color.text.white1};
     font-size: 20px;
     font-weight: bold;
   }
+`;
+
+const DomainSelectOpenButton = styled.button`
+  position: fixed;
+  bottom: 20px;
+  right: 90px;
+  width: 60px;
+  height: 60px; 
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${color.background.secondary};
+  box-shadow: 0 0 3px ${color.shadow.primary};
+  overflow: hidden;
+  z-index: 100;
 `;
 
 const TrainingOpenButton = styled.button`
@@ -241,7 +287,8 @@ const TrainingOpenButton = styled.button`
   justify-content: center;
   background-color: ${color.background.secondary};
   box-shadow: 0 0 3px ${color.shadow.primary};
-  overflow: hidden;`
-;
+  overflow: hidden;
+  z-index: 100;
+`;
 
 export default KNNDetector

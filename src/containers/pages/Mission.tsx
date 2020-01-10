@@ -43,7 +43,6 @@ const Mission: any = (props: any) => {
           )
         })
       }
-      <QrReader delay={300} onScan={handleScan} onError={handleError}/>
     </>
   );
 
