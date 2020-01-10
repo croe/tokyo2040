@@ -8,7 +8,8 @@ export default {
     primary: "#333333",
     level1: "#4e69b1",
     level2: "#fac016",
-    level3: "#eb634c"
+    level3: "#eb634c",
+    white1: "#ffffff"
   },
   border: {
     primary: "#dedede"

@@ -13,7 +13,6 @@ import {HOME, SIGNIN, MISSION} from "./constants/routes";
 import styled, {createGlobalStyle, ThemeProvider} from "styled-components";
 import {Reset} from "styled-reset";
 import bgImg from './bg.png';
-import TransactionButton from './components/molecules/TransactionButton';
 
 const GlobalStyle = createGlobalStyle<any>`
   * { box-sizing: border-box; }
@@ -58,7 +57,6 @@ const App = (props: any) => {
             <Route path={SIGNIN}><Signin /></Route>
             <Route path={MISSION}><Mission {...props} /></Route>
           </Switch>
-          <TransactionButton />
         </AppContainer>
       </BrowserRouter>
     </ThemeProvider>
