@@ -35,7 +35,7 @@ const CardContainer = styled.div`
   padding: 20px;
   box-shadow: 0 0 3px ${color.shadow.primary};
   border-radius: 8px;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(20px);
   background-color: ${color.background.glass};
   color: ${props => getLevelColor(props)};
 `;

@@ -7,7 +7,24 @@ const CountdownTimer = (props:any) => {
     let now:any = moment().format('X')
     let timeLeft:any = 0;
     if (props.timestamp) {
-      timeLeft = 60 - (+now - +moment(props.timestamp).format('X'));
+      timeLeft = 120 - (+now - +moment(props.timestamp).format('X'));
+    }
+    /**
+     * 5秒に一度？（処理速度による）AIが自動動作する
+     * この時に撮影する写真はボード全体を意識的にとるようにするのか
+     */
+    if ((timeLeft % 10) === 0){
+      if (props.knnComp.current) {
+        props.knnComp.current.getClassify();
+      }
+    }
+    if (timeLeft === 119) {
+      if (props.knnComp.current) {
+        props.knnComp.current.learningMap();
+        // setTimeout(() => {
+        //   window.location.reload();
+        // }, 500);
+      }
     }
     return timeLeft
   };
@@ -21,10 +38,7 @@ const CountdownTimer = (props:any) => {
   });
 
   return (
-    <div>
-      <h2>With React Hooks!</h2>
-      {timeLeft}
-    </div>
+    <span>Next:{timeLeft} sec.</span>
   );
 
 }

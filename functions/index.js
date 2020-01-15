@@ -5,7 +5,7 @@ admin.initializeApp(functions.config().firebase)
 
 const db = admin.firestore();
 
-exports.scheduledFunction = functions.pubsub.schedule('every 1 minutes').onRun((context) => {
+exports.scheduledFunction = functions.pubsub.schedule('every 2 minutes').onRun((context) => {
   const blockchain = db.collection("blockchain");
   blockchain.doc("block").get()
     .then((doc) => {

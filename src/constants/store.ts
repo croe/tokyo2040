@@ -1,13 +1,16 @@
 import { combineReducers, createStore } from "redux"
 import { UserInfo, authReducer } from "../modules/Auth";
+import { MissionInfo, missionReducer} from "../modules/Mission";
 
 export type ReduxState = {
-  userInfo: UserInfo
+  userInfo: UserInfo,
+  missionInfo: MissionInfo
 }
 
 const store = createStore(
   combineReducers<ReduxState>({
-    userInfo: authReducer
+    userInfo: authReducer,
+    missionInfo: missionReducer
   })
 )
 

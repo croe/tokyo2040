@@ -1,0 +1,242 @@
+[
+  {
+    "alartName": "caregiver",
+    "alartNameSub": "介護要求",
+    "costInt": 2,
+    "costStr": 1,
+    "level": 2,
+    "placeName": "SUGAMO",
+    "poster": 23,
+    "mission": "3つのうち2つで奇数をだす"
+  },
+  {
+    "alartName": "get lost",
+    "alartNameSub": "道に迷う",
+    "costInt": 0,
+    "costStr": 2,
+    "level": 1,
+    "placeName": "OKUBO",
+    "poster": 16,
+    "mission": "どれか一つで奇数を出す"
+  },
+  {
+    "alartName": "accident forecast",
+    "alartNameSub": "事故予報",
+    "costInt": 3,
+    "costStr": 1,
+    "level": 3,
+    "placeName": "ROPPONGI",
+    "poster": 3,
+    "mission": "合計数で11以上を出す"
+  },
+  {
+    "alartName": "sudden illness",
+    "alartNameSub": "急病予報",
+    "costInt": 2,
+    "costStr": 0,
+    "level": 1,
+    "placeName": "TSUKIJI",
+    "poster": 10,
+    "mission": "どれか一つで4以上を出す。"
+  },
+  {
+    "alartName": "injury forecast",
+    "alartNameSub": "怪我事故予報",
+    "costInt": 2,
+    "costStr": 1,
+    "level": 2,
+    "placeName": "TOYOSU",
+    "poster": 24,
+    "mission": "3つのうち2つで偶数をだす"
+  },
+  {
+    "alartName": "need help",
+    "alartNameSub": "助けを求める",
+    "costInt": 1,
+    "costStr": 2,
+    "level": 2,
+    "placeName": "UENO",
+    "poster": 17,
+    "mission": "合計数で12以上を出す"
+  },
+  {
+    "alartName": "crash forecast",
+    "alartNameSub": "墜落予報",
+    "costInt": 4,
+    "costStr": 0,
+    "level": 3,
+    "placeName": "SHINJUKU",
+    "poster": 6,
+    "mission": "全てで3以上を出す。"
+  },
+  {
+    "alartName": "poor health",
+    "alartNameSub": "体調不良",
+    "costInt": 0,
+    "costStr": 1,
+    "level": 1,
+    "placeName": "SHIROKANE",
+    "poster": 14,
+    "mission": "どれか一つで2以下を出す。"
+  },
+  {
+    "alartName": "caregiver",
+    "alartNameSub": "介護要求",
+    "costInt": 0,
+    "costStr": 2,
+    "level": 2,
+    "placeName": "ASAKUSA",
+    "poster": 18,
+    "mission": "どれか一つで5以上を出す。"
+  },
+  {
+    "alartName": "need help",
+    "alartNameSub": "助けを求める",
+    "costInt": 2,
+    "costStr": 0,
+    "level": 1,
+    "placeName": "KIBA",
+    "poster": 13,
+    "mission": "合計数で7以上を出す"
+  },
+  {
+    "alartName": "flood forecast",
+    "alartNameSub": "水害予報",
+    "costInt": 0,
+    "costStr": 3,
+    "level": 2,
+    "placeName": "ODAIBA",
+    "poster": 21,
+    "mission": "どれか2つで奇数をだす"
+  },
+  {
+    "alartName": "fire forecast",
+    "alartNameSub": "火災予報",
+    "costInt": 2,
+    "costStr": 2,
+    "level": 3,
+    "placeName": "AKIHABARA",
+    "poster": 8,
+    "mission": "どれか2つで3以上を出す。"
+  },
+  {
+    "alartName": "need help",
+    "alartNameSub": "助けを求める",
+    "costInt": 2,
+    "costStr": 0,
+    "level": 1,
+    "placeName": "RYOGOKU",
+    "poster": 11,
+    "mission": "合計数で6以上を出す"
+  },
+  {
+    "alartName": "need help",
+    "alartNameSub": "助けを求める",
+    "costInt": 1,
+    "costStr": 1,
+    "level": 1,
+    "placeName": "ICHIGAYA",
+    "poster": 15,
+    "mission": "合計数で7以上を出す"
+  },
+  {
+    "alartName": "injury forecast",
+    "alartNameSub": "怪我事故予報",
+    "costInt": 2,
+    "costStr": 1,
+    "level": 2,
+    "placeName": "HARAJUKU",
+    "poster": 19,
+    "mission": "合計数で10以上を出す"
+  },
+  {
+    "alartName": "collide forecast",
+    "alartNameSub": "衝突予報",
+    "costInt": 1,
+    "costStr": 1,
+    "level": 1,
+    "placeName": "TAKADANOBABA",
+    "poster": 9,
+    "mission": "合計数で7以上を出す"
+  },
+  {
+    "alartName": "Mt.Fuji eruption",
+    "alartNameSub": "富士山噴火予報",
+    "costInt": 2,
+    "costStr": 2,
+    "level": 3,
+    "placeName": "MARUNOUCHI",
+    "poster": 5,
+    "mission": "ゾロ目を出す（2個揃えばOK）"
+  },
+  {
+    "alartName": "malicious plan",
+    "alartNameSub": "悪意のある計画",
+    "costInt": 3,
+    "costStr": 1,
+    "level": 3,
+    "placeName": "SHINAGAWA",
+    "poster": 4,
+    "mission": "どれか２つが奇数を出す"
+  },
+  {
+    "alartName": "sudden illness",
+    "alartNameSub": "急病予報",
+    "costInt": 1,
+    "costStr": 2,
+    "level": 2,
+    "placeName": "EBISU",
+    "poster": 20,
+    "mission": "サイコロを振って3以上を出す"
+  },
+  {
+    "alartName": "need help",
+    "alartNameSub": "助けを求める",
+    "costInt": 2,
+    "costStr": 1,
+    "level": 2,
+    "placeName": "SHINBASHI",
+    "poster": 22,
+    "mission": "どれか一つで4以上を出す。"
+  },
+  {
+    "alartName": "need help",
+    "alartNameSub": "助けを求める",
+    "costInt": 1,
+    "costStr": 3,
+    "level": 3,
+    "placeName": "SHIBUYA",
+    "poster": 1,
+    "mission": "どれか２つが偶数を出す"
+  },
+  {
+    "alartName": "accident forecast",
+    "alartNameSub": "事故予報",
+    "costInt": 2,
+    "costStr": 2,
+    "level": 3,
+    "placeName": "AKASAKA",
+    "poster": 2,
+    "mission": "どれか一つで1か6を出す"
+  },
+  {
+    "alartName": "incident forecast",
+    "alartNameSub": "事件予報",
+    "costInt": 3,
+    "costStr": 1,
+    "level": 3,
+    "placeName": "IKEBUKURO",
+    "poster": 7,
+    "mission": "どれか一つで1か6を出す"
+  },
+  {
+    "alartName": "need help",
+    "alartNameSub": "助けを求める",
+    "costInt": 1,
+    "costStr": 1,
+    "level": 1,
+    "placeName": "HAMACHO",
+    "poster": 12,
+    "mission": "どれか一つで4以下を出す。"
+  }
+]

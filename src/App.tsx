@@ -6,12 +6,12 @@ import {
 } from "react-router-dom";
 import Home from './containers/pages/Home'
 import Signin from './containers/pages/Signin'
-import Mission from './containers/pages/Mission'
 import {ReduxState} from "./constants/store";
 import {connect} from "react-redux";
-import {HOME, SIGNIN, MISSION} from "./constants/routes";
+import {HOME, SIGNIN} from "./constants/routes";
 import styled, {createGlobalStyle, ThemeProvider} from "styled-components";
 import {Reset} from "styled-reset";
+import ResetPage from './containers/pages/Reset';
 import bgImg from './bg.png';
 
 const GlobalStyle = createGlobalStyle<any>`
@@ -38,6 +38,16 @@ const GlobalStyle = createGlobalStyle<any>`
       z-index: -1;
     }
   }
+  .knn_video {
+    position: fixed;
+    width: 100%!important;
+    top: 0;
+    left: 0;
+    padding-top: 70px;
+  }
+  .p5Canvas {
+    height: 1px!important;
+  }
 `;
 
 function mapStateToProps(state: ReduxState) {
@@ -55,7 +65,7 @@ const App = (props: any) => {
           <Switch>
             <Route exact path={HOME}><Home /></Route>
             <Route path={SIGNIN}><Signin /></Route>
-            <Route path={MISSION}><Mission {...props} /></Route>
+            <Route path="/reset"><ResetPage /></Route>
           </Switch>
         </AppContainer>
       </BrowserRouter>

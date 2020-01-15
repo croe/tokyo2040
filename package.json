@@ -30,6 +30,7 @@
     "redux": "^4.0.5",
     "styled-components": "^4.4.1",
     "styled-reset": "^4.0.9",
+    "sweetalert2": "^9.5.4",
     "typescript": "~3.7.2",
     "typescript-fsa": "^3.0.0",
     "typescript-fsa-reducers": "^1.2.1"
