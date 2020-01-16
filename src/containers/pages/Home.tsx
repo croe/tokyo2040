@@ -104,7 +104,8 @@ const Home = (props: any) => {
             domains.where('placeName', '==', mission.placeName).get()
               .then((snapshot:any) => {
                 domains.doc(snapshot.docs[0].id).update({
-                  hero: props.userInfo.uid
+                  hero: props.userInfo.uid,
+                  heroName: props.userInfo.displayName
                 })
               });
           }
@@ -191,8 +192,8 @@ const Home = (props: any) => {
   return (
     <HomeContainer>
       <HomeHeader>
-        <H2>{block.height} Block. </H2><ToNext>→→→ </ToNext><CountdownTimer {...block} knnComp={KnnRef} />
-        <H2> {MyPoint}pt</H2>
+        <H2><PointVal>{block.height}</PointVal> Block. </H2><ToNext>→→→ </ToNext><CountdownTimer {...block} knnComp={KnnRef} />
+        <H2><PointVal>{MyPoint}</PointVal> pt</H2>
       </HomeHeader>
       <KNNDetector callback={detectLabel} ref={KnnRef} />
       {
@@ -227,6 +228,10 @@ const customStyles2 = {
     zIndex                : '1000'
   }
 };
+
+const PointVal = styled.span`
+  font-size: 20px;
+`;
 
 const HomeContainer = styled.div`
   padding: 50px 0 0;

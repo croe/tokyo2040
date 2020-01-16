@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import moment from 'moment';
+import styled from 'styled-components';
 
 const CountdownTimer = (props:any) => {
 
@@ -38,9 +39,23 @@ const CountdownTimer = (props:any) => {
   });
 
   return (
-    <span>Next:{timeLeft} sec.</span>
+    <p>Next: <Timer time={timeLeft}>{timeLeft}</Timer> sec.</p>
   );
 
 }
+
+const Timer = styled.span<any>`
+  font-size: 20px;
+  color: ${props => getTimerStyle(props)};
+`;
+
+const getTimerStyle = (props:any) => {
+  if (props.time < 10) {
+    return 'red';
+  } else {
+    return 'black';
+  }
+}
+
 
 export default CountdownTimer

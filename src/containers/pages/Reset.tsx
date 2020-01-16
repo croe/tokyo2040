@@ -13,13 +13,14 @@ const ResetPage:any = () => {
       .then((snapshot:any)=>{
         snapshot.docs.map((doc:any, i:number) => {
           domains.doc(doc.id).update({
-            hero: ""
+            hero: "",
+            heroName: ""
           })
         })
       })
     model.doc('map').update({
       data: "{dataset:{}, tensors:[]}"
-    })
+    });
   }
 
 

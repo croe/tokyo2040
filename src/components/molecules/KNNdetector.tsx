@@ -33,6 +33,9 @@ const KNNDetector = forwardRef((props:any, ref:any) => {
     },
     learningMap() {
       addExample()
+    },
+    getCountByLabel(){
+      return knnClassifier.getCountByLabel();
     }
   }));
 

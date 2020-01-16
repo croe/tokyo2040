@@ -4,11 +4,12 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Home from './containers/pages/Home'
+import Home from './containers/pages/Home';
+import Overview from './containers/pages/Overview';
 import Signin from './containers/pages/Signin'
 import {ReduxState} from "./constants/store";
 import {connect} from "react-redux";
-import {HOME, SIGNIN} from "./constants/routes";
+import {HOME, SIGNIN, GAME_RESET, OVERVIEW} from "./constants/routes";
 import styled, {createGlobalStyle, ThemeProvider} from "styled-components";
 import {Reset} from "styled-reset";
 import ResetPage from './containers/pages/Reset';
@@ -65,7 +66,8 @@ const App = (props: any) => {
           <Switch>
             <Route exact path={HOME}><Home /></Route>
             <Route path={SIGNIN}><Signin /></Route>
-            <Route path="/reset"><ResetPage /></Route>
+            <Route path={GAME_RESET}><ResetPage /></Route>
+            <Route path={OVERVIEW}><Overview /></Route>
           </Switch>
         </AppContainer>
       </BrowserRouter>
